@@ -1,0 +1,29 @@
+############################################################################
+# 20-modem-nimbelink.rules
+#
+# NIMBELINK (Telit  Modem Rules
+#
+# Find the PCIe 3G modem and create symlinks for it
+#
+#
+# Author:       Andrew O'Connell
+# Last Revised: June December 2022
+# Created:      16th June 2022
+############################################################################
+
+
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb",ATTRS{idVendor}!="1bc7",GOTO="modem_NIMBELINK_end"
+
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb", DRIVERS=="option", ATTRS{bInterfaceNumber}=="00",SYMLINK+="modemS0"
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb", DRIVERS=="option", ATTRS{bInterfaceNumber}=="03",SYMLINK+="modemS1"
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb", DRIVERS=="option", ATTRS{bInterfaceNumber}=="04",SYMLINK+="modemS2"
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb", DRIVERS=="option", ATTRS{bInterfaceNumber}=="05",SYMLINK+="modemS3"
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb", DRIVERS=="option", ATTRS{bInterfaceNumber}=="06",SYMLINK+="modemS4"
+
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb", DRIVERS=="option", ATTRS{bInterfaceNumber}=="03",SYMLINK+="modemGPS"
+
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb", DRIVERS=="option", ATTRS{bInterfaceNumber}=="05",SYMLINK+="modemAT"
+KERNELS=="1-1.4*",SUBSYSTEMS=="usb", DRIVERS=="option", ATTRS{bInterfaceNumber}=="04",SYMLINK+="modemPPP"
+
+
+LABEL="modem_NIMBELINK_end"
