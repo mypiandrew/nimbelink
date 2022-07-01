@@ -1,6 +1,6 @@
 # NimbeLink scripts to interact with Skywire Modems
 
-##UDEV Rules
+## UDEV Rules
 
 The udev rules file should be installed in /etc/udev/rules.d to allow easy access to the shortcuts below 
 ```
@@ -15,7 +15,7 @@ lrwxrwxrwx 1 root root 7 Jul  1 11:12 /dev/modemS3 -> ttyUSB4
 lrwxrwxrwx 1 root root 7 Jul  1 11:12 /dev/modemS4 -> ttyUSB5
 ```
 
-##Carrier Firmware Switching
+## Carrier Firmware Switching
 
 The Modem Fiirmware Switch utility allows the user to ad-hoc switch the modem between AT&T/Verizon or T-MOBILE modes, to suit the installed SIM type.
 This can also be run in silent mode with bash variable outputs for use with other scripts by adding the additonal -q option flag.
@@ -57,7 +57,7 @@ Modem Back
 New Setting : Firmware = VERIZON
 ```
 
-##GPS Receiver Script
+## GPS Receiver Script
 
 This script allows the user to start-up to modems GPS functionality, including starting the automated NMEA feed on /dev/modemGPS.
 The GPS feed will take about 1-3mins to get a first fix and start reporting valid data.
