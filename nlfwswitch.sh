@@ -17,7 +17,7 @@ elif [[ "$1" == "att"  ]]; then
 elif [[ "$1" == "tmobile"  ]]; then
     FWSWITCHMODE=2
 elif [[ "$1" == "read" ]] ; then
-    FWSWITCHMODE=4
+    FWSWITCHMODE=3
 else
     echo
     echo " NimbeLink Telit Auto Firmware Mode Switch"
@@ -67,7 +67,7 @@ else
         echo "Current Setting : Firmware = AT&T"
     elif [[ "$MODE" -eq 1 ]] ; then
         echo "Current Setting : Firmware = VERIZON"
-	elif [[ "$MODE" -eq 3 ]] ; then
+	elif [[ "$MODE" -eq 2 ]] ; then
         echo "Current Setting : Firmware = TMOBILE"	
     else
         echo "   ** UNKNOWN ** "
