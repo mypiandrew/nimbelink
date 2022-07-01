@@ -89,7 +89,6 @@ case $GPSACTION in
 	# AT$GPSACP
 	# $GPSACP: 144253.000,5143.5329N,00212.1938W,0.8,39.5,3,159.6,0.0,0.0,210622,08,02
 	# OK
-	echo "oneshot"
 		chat -Vs TIMEOUT 1 "" 'AT$GPSACP' "OK" >/dev/modemAT </dev/modemAT 2>/tmp/log
 		REGEX='(\$GPSACP: (.+),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(..))'
 		RESPONSE=$(</tmp/log)
