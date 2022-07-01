@@ -80,10 +80,13 @@ root@raspberrypi:~# ./nlgps.sh
 
 root@raspberrypi:~# ./nlgps.sh on
 GPS Receiver Now ON
+
 root@raspberrypi:~# ./nlgps.sh oneshot
 $GPSACP: 112100.000,5143.5040N,00212.1727W,1.5,-44.4,3,144.4,0.0,0.0,010722,05,02
+
 root@raspberrypi:~# ./nlgps.sh feedon
 GPS Feed on /dev/modemGPS Now ON
+
 root@raspberrypi:~# minicom -D /dev/modemGPS -b 9600
 Welcome to minicom 2.7.1
 
