@@ -64,9 +64,9 @@ The GPS feed will take about 1-3mins to get a first fix and start reporting vali
 
 Note you will need to attach an active GPS antenna to the GPS port on the SIM side of the modem module PCB
 
+```
 root@raspberrypi:~# ./nlgps.sh
 
-```
  NimbeLink Telit GPS Configuration
  *****************************************
 
